@@ -27,12 +27,12 @@ for web in webs :
         for row in rows :
             row_data = {}
             columns = row.find_all('td')
-            row_data['nomor-perkara'] = columns[1].text
-            row_data['tanggal-register'] = columns[2].text
+            row_data['nomorPerkara'] = columns[1].text
+            row_data['tanggalRegister'] = columns[2].text
             row_data['klasifikasi'] = columns[3].text
-            row_data['para-pihak'] = columns[4].text
-            row_data['status-perkara'] = columns[5].text
-            row_data['lama-proses'] = columns[6].text
+            row_data['paraPihak'] = columns[4].text
+            row_data['statusPerkara'] = columns[5].text
+            row_data['lamaProses'] = columns[6].text
             row_data['detail'] = columns[7].a.get('href')
             post(row_data)
         print(web, 'done')
